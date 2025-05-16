@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+    <div th:insert="menu :: menu"></div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Video Background -->
+            <div class="video-background">
+                <video autoplay muted loop playsinline>
+                    <source src="/assets/images/mixkit-sky-view-with-sun-and-clouds-in-a-timelapse-50160-hd-ready.mp4"
+                        type="video/mp4">
+                    <!-- Fallback image if video doesn't load -->
+                    <img src="assets/images/fallback-bg.jpg" alt="Background Pattern">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="profile-pic">
+                    <img src="/assets/images/profile1.jpg" alt="Manish Uttam Bhavar">
+                </div>
+                <h1>
+                    <span class="typewriter">Hi, I am Manish.</span><br>
+                    <span class="typewriter delay">Aspiring Java Full Stack Developer</span>
+                </h1>
+                <p class="subtitle">MCA Student | Web Developer | AI Enthusiast</p>
+                <div class="social-links">
+                    <a href="https://github.com/bmanish55" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/manish-bhavar-598aba297/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a onclick="showEmailPopup()"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a th:href="@{/projects }" class="btn">View My Work</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>🌟 Hello! I’m currently diving into the world of technology as I pursue my MCA in Management at MET
+                    Bhujbal Knowledge City. My journey began with a Commerce, but I found my true calling in the tech
+                    space.
+
+                    Before stepping into the realm of tech and management, I gained valuable experience working as an
+                    associate at Writer Corporation. This role ignited my passion for the dynamic intersection of
+                    business and technology. Now, I’m eager to explore the exciting fields of cyber security and machine
+                    learning—areas that not only challenge me but also fuel my curiosity about how we can shape a safer
+                    and smarter future.
+
+                    I believe in the power of technology to transform lives, and I’m committed to being part of that
+                    change. Whether it's enhancing security measures or unlocking the potential of machine learning, I’m
+                    excited about the endless possibilities that lie ahead.</p>
+                <div class="info-grid">
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> Nashik, India</div>
+                    <div class="info-item" onclick="showEmailPopup()"><i class="fas fa-envelope"></i> <span
+                            class="email-text">mbhavar2121@gmail.com</span></div>
+                    <div class="info-item"><i class="fas fa-university"></i> MET's Bhujbal Knowledge City</div>
+                </div>
+        </section>
+    </main>
+
+    <!-- Email Popup -->
+    <div class="popup-overlay" id="emailPopup">
+        <div class="popup-content">
+            <h3>Contact Email</h3>
+            <div style="margin: 20px 0; font-size: 18px;">
+                <i class="fas fa-envelope" style="font-size: 24px;"></i>
+                <p>mbhavar2121@gmail.com</p>
+            </div>
+            <button onclick="copyEmail()"
+                style="padding: 8px 16px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                Copy Email
+            </button>
+            <button onclick="closePopup()"
+                style="padding: 8px 16px; background: #f1f1f1; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">
+                Close
+            </button>
+        </div>
+    </div>
+    <div th:insert="footer :: footer"></div>
+
+    <script src="/assets/js/main.js"></script>
+    <script>
+        // Email popup functionality
+        function showEmailPopup() {
+            document.getElementById('emailPopup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('emailPopup').style.display = 'none';
+        }
+
+        function copyEmail() {
+            const email = 'mbhavar2121@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email copied to clipboard!');
+            }).catch(err => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = email;
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    alert('Email copied to clipboard!');
+                } catch (err) {
+                    alert('Failed to copy email. Please copy it manually.');
+                }
+                document.body.removeChild(textarea);
+            });
+        }
+    </script>
+    <style>
+        /* Add only the popup-specific styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Make the email in about section clickable */
+        .info-grid div:nth-child(2) {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</body>
+
+</html>
