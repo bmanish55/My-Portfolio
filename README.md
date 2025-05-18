@@ -24,8 +24,8 @@ This repository contains the source code for my personal portfolio website built
 
 **Manish Uttam Bhavar**  
 📍 MCA Management Student, MET Bhujbal Knowledge City, Nashik  
-📧 manishuttambhavar@gmail.com  
-🌐 [LinkedIn](https://www.linkedin.com/in/manishbhavar)
+📧 mbhavar2121@gmail.com  
+🌐 [LinkedIn](https://www.linkedin.com/in/manish-bhavar-598aba297/)
 
 ## 💡 How to Run
 
