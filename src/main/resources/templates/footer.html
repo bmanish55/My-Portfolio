@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" th:fragment="footer">
 <head>
 </head>
 <body>
-<footer th:fragment="footer">
-      <p>&copy; 2025 Manish Uttam Bhavar. All rights reserved.</p>
+<footer>
+      <nav>
+            <div class="nav-links-container">
+                  <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                  </ul>
+            </div>
+      </nav>
+      <p>Copyright &#169; <span id="year"></span> Manish Bhavar. All Rights Reserved.</p>
 </footer>
-
 </body>
 </html>
