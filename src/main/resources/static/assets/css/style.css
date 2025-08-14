@@ -355,6 +355,11 @@ article .icon {
   cursor: default;
 }
 
+/* ===== Resume Section Styling ===== */
+
+
+/* Resume section ends here */
+
 /* PROJECTS SECTION */
 
 #projects {
@@ -392,6 +397,82 @@ article .icon {
 }
 
 /* CONTACT */
+/* contact form started from here */
+/* contact from strat */
+.fs-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid rgb(163, 163, 163);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fs-field {
+  margin-bottom: 1.2rem;
+}
+
+.fs-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: rgb(53, 53, 53);
+}
+
+.fs-input,
+.fs-textarea {
+  width: 90%;;
+  padding: 0.5rem 1rem 1rem 1rem;
+  border: 1px solid rgb(163, 163, 163);
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.fs-input:focus,
+.fs-textarea:focus {
+  border-color: var(--text-gradient-yellow, #ffcc00);
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.2);
+}
+
+.fs-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.fs-button-group {
+  text-align: center;
+}
+
+.fs-button {
+  background: rgb(53, 53, 53);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fs-button:hover {
+  background: linear-gradient(to right, #ffcc00, #ffaa00);
+  color: #000;
+}
+
+/* Responsive Form */
+@media (max-width: 600px) {
+  .fs-form {
+    padding: 1rem;
+  }
+}
+
+/* ends here */
 
 #contact {
   display: flex;

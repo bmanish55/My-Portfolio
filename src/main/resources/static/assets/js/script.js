@@ -4,3 +4,21 @@ function toggleMenu() {
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
+document.addEventListener("DOMContentLoaded", function () {
+  const skillFills = document.querySelectorAll(".skill-progress-fill");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const fill = entry.target;
+        const percentage = fill.parentElement.previousElementSibling.querySelector("data").value;
+        fill.style.width = percentage + "%";
+        observer.unobserve(fill); // Animate only once
+      }
+    });
+  }, { threshold: 0.3 });
+
+  skillFills.forEach(fill => {
+    observer.observe(fill);
+  });
+});
