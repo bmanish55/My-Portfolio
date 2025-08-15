@@ -6,649 +6,476 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manish Bhavar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/mediaqueries.css" />
 </head>
 
 <body>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<!-- Navbar -->
-<div th:insert="menu :: menu"></div>
-<!-- Navbar -->
-<section id="profile">
-    <div class="section__pic-container">
-        <img src="./assets/images/profile-pic.png" alt="Manish profile picture" />
-    </div>
-    <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Manish Bhavar</h1>
-        <p class="section__text__p2"><span class="auto-type"></span></p>
-        <script>
-            var typed = new Typed(".auto-type", {
-                strings: ["Java Programmer", "Web Devloper", "Problem Solver", "FullStack Devloper"],
-                typeSpeed: 80,
-                backSpeed: 60,
-                backDelay: 3500,
-                loop: true
-            })
-        </script>
-        <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('/assets/images/resume-example.pdf')">
-                Download CV
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                Contact Info
-            </button>
-        </div>
-        <div id="socials-container">
-            <img src="/assets/images/linkedin.png" alt="My LinkedIn profile" class="icon"
-                 onclick="location.href='https://www.linkedin.com/in/manish-bhavar-598aba297/'" />
-            <img src="/assets/images/github.png" alt="My Github profile" class="icon"
-                 onclick="location.href='https://github.com/bmanish55'" />
-        </div>
-    </div>
-</section>
-<section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Navbar -->
+    <div th:insert="menu :: menu"></div>
+    <!-- Navbar -->
+    <section id="profile">
         <div class="section__pic-container">
-            <img src="/assets/images/man-doing-code-generation-9553010-7795816.gif" alt="Profile picture"
-                 class="about-pic" />
+            <img src="./assets/images/profile-pic.png" alt="Manish profile picture" />
         </div>
-        <div class="about-details-container">
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Manish Bhavar</h1>
+            <p class="section__text__p2"><span class="auto-type"></span></p>
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ["Java Programmer ...", "Frontend Devloper ...", "Problem Solver ...", " FullStack Devloper "],
+                    typeSpeed: 80,
+                    backSpeed: 60,
+                    backDelay: 3500,
+                    loop: true
+                })
+            </script>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('/assets/images/resume-example.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="/assets/images/linkedin.png" alt="My LinkedIn profile" class="icon"
+                    onclick="location.href='https://www.linkedin.com/in/manish-bhavar-598aba297/'" />
+                <img src="/assets/images/github.png" alt="My Github profile" class="icon"
+                    onclick="location.href='https://github.com/bmanish55'" />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="/assets/images/man-doing-code-generation-9553010-7795816.gif" alt="Profile picture"
+                    class="about-pic" />
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="/assets/images/experience.png" alt="Skills icon" class="icon" />
+                        <h3>Skills</h3>
+                        <p>FullStack Developer</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="/assets/images/education.png" alt="Education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>MCA in Management</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I am a passionate backend developer with strong expertise in building robust and scalable
+                        applications using Java Spring Boot and C# with the .NET framework. I specialize in designing
+                        clean architectures, writing maintainable code, and delivering solutions that meet real-world
+                        business needs.
+                        My technical skills include MySQL database management, schema designing for optimal performance,
+                        and creating well-structured APIs that ensure smooth integration between systems. I thrive in
+                        backend logic development, focusing on reliability, security, and efficiency.
+                        With a problem-solving mindset and an eagerness to explore emerging technologies, I continuously
+                        enhance my skill set to deliver high-quality, future-ready software solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="/assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+    </section>
+
+    <section id="skills">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Technical Skills</h1>
+        <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-container">
-                    <img src="/assets/images/experience.png" alt="Skills icon" class="icon" />
-                    <h3>Skills</h3>
-                    <p>FullStack Developer</p>
+                    <h2 class="experience-sub-title">Programming Languages</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="/assets/images/Java.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Core Java</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/Python.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Python</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/js.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/c-sharp.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>C#</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
                 <div class="details-container">
-                    <img src="/assets/images/education.png" alt="Education icon" class="icon" />
-                    <h3>Education</h3>
-                    <p>MCA in Management</p>
+                    <h2 class="experience-sub-title">Java Full Stack</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="/assets/images/Spring.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Spring Framework</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/Hibernate.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Hibernate</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/servlet.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Servlet</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/frontend.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Frontend </h3>
+                                <p>(HTML/CSS)</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
-            <div class="text-container">
-                <p>
-                    I am a passionate backend developer with strong expertise in building robust and scalable
-                    applications using Java Spring Boot and C# with the .NET framework. I specialize in designing
-                    clean architectures, writing maintainable code, and delivering solutions that meet real-world
-                    business needs.
-                    My technical skills include MySQL database management, schema designing for optimal performance,
-                    and creating well-structured APIs that ensure smooth integration between systems. I thrive in
-                    backend logic development, focusing on reliability, security, and efficiency.
-                    With a problem-solving mindset and an eagerness to explore emerging technologies, I continuously
-                    enhance my skill set to deliver high-quality, future-ready software solutions.
-                </p>
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Databases</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="/assets/images/MySQL.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>MySQL</h3>
+                                <p>Advanced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/MongoDB.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>MongoDB</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/redis.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Redis</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Tools & Technologies</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="/assets/images/Git.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Git</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/NET.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>. NET</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/Power-BI-Logo.png" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>Power BI</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/assets/images/AWS.svg" alt="Skill icon" class="icon" />
+                            <div>
+                                <h3>AWS</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <img src="/assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
-</section>
-<!-- resume section -->
-<!--
-   - #RESUME
- -->
-<!-- <div>
+        <img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow"
+            onclick="location.href='./#projects'" />
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+
+        <div class="experience-details-container">
+            <div class="about-containers">
+
+                <!-- Project 1 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="/assets/images/web summerize.png" alt="Web Summarizer" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Web Summarizer</h2>
+                    <p class="project-description">
+                        A web app that summarizes lengthy content or articles into short, digestible summaries.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/bmanish55/Web-Summarizer'">Github</button>
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://replit.com/@ManishBhavar/Web-Summarizer#README.md'">Live
+                            Demo</button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="/assets/images/netflix-dashboard.jpg" alt="Netflix Dashboard" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Netflix Data Visualization</h2>
+                    <p class="project-description">
+                        A Power BI dashboard exploring Netflix's content metrics—genres, countries, release years, and
+                        more.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/bmanish55/Netflix-Data-Visualization'">Github</button>
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://www.linkedin.com/posts/manish-bhavar-598aba297_powerbi-datavisualization-certification-activity-7283931494555799552-0LaJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEfjacQBKz6Va1feD3LYcI6cP-xxVn09SdI'">Dashboard</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="/assets/images/MoodBased.jpg" alt="Mood Based Music" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Mood-Based Music Recommendation</h2>
+                    <p class="project-description">
+                        Detects user mood via facial expressions and recommends songs using YouTube and Spotify APIs.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/bmanish55/Mood_Based_Music_Recommendation_System'">Github</button>
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://replit.com/@ManishBhavar/MoodBasedMusicRecommendationSystem'">Live
+                            Demo</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-containers">
+
+                <!-- Project 4 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="/assets/images/giphy.gif" alt="TO-DO Application" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">TO-DO Application</h2>
+                    <p class="project-description">
+                        To-Do Application built with Spring Boot, offering CRUD functionality for managing tasks
+                        efficiently.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/bmanish55/To-Do-Application-Using-Spring-Boot'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='#'">Live Demo</button>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="/assets/images/Ecommerce.webp" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">E-Commerce Application</h2>
+                    <p class="project-description">
+                        Built a full-stack E-Commerce app with Spring Boot and MySQL, featuring product catalog.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/bmanish55/E-Commerce-Shopping-Application/tree/main'">Github</button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://replit.com/import/github/bmanish55/E-Commerce-Shopping-Application'">Live Demo</button>
+                    </div>
+                </div>
+                <!-- project 6  -->
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="/assets/images/FaceAttendance.png" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Face Recongnition Attendance Management</h2>
+                    <p class="project-description">
+                       Buit with AI: Transformative Learning with TechSaksham
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/bmanish55/Face_recongnition_attendance_mgm/tree/main/Face_Rec_Project'">Github</button>
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://replit.com/import/github/bmanish55/Face_recongnition_attendance_mgm'">Live
+                            Demo</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+
+    <!-- blogs start here -->
     <div>
+        <p class="section__text__p1">Explore My Recent</p>
+        <h1 class="title">Blogs</h1>
+    </div>
+
+    <div id="blog-section">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/1stBlog.jpeg" alt="">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://facialdatarecognition.hashnode.dev/the-evolution-of-facial-recognition-from-early-methods-to-future-innovations', '_blank')">The
+                            Evolution of Facial Recognition</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/slide-2.jpg" alt="image">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://facialdatarecognition.hashnode.dev/facial-recognition-past-present-and-future', '_blank')">Facial
+                            Recognition: Past, Present & Future</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/blog-2.jpg" alt="">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://websummerizingtools.hashnode.dev/text-summarization-tools-tracing-the-journey-from-early-algorithms-to-ai-powered-future', '_blank')">Text
+                            Summarization Tools</span>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/blog-4.jpg" alt="">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://websummerizingtools.hashnode.dev/beyond-bullet-points-smarter-web-summarizers-with-cutting-edge-algorithms', '_blank')">Beyond
+                            Bullet Points</span>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/blog-5.jpg" alt="">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://facialdatarecognition.hashnode.dev/voice-modulation-detection-history-and-optimum-algorithms', '_blank')">Voice
+                            Modulation Detection</span>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/blog-6.jpg" alt="">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://facialdatarecognition.hashnode.dev/use-of-vision-api-in-agriculture-sector-disease-detection-focus', '_blank')">Use
+                            of Vision API in Agriculture Sector</span>
+                    </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide">
+                    <img src="/assets/images/blog-7.jpg" alt="">
+                    <div class="blogtitle">
+                        <span class="blog-btn"
+                            onclick="window.open('https://facialdatarecognition.hashnode.dev/building-a-voice-modulation-detection-project-using-spring-boot-and-java', '_blank')">Voice
+                            Modulation Detection Using Spring Ai and Java</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- blogs ends here  -->
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <!-- contact form -->
         <div>
-            <article class="resume" data-page="resume">
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
+            <form action="https://formspree.io/f/{FORM_ID}" class="fs-form" target="_top" method="POST">
+                <div class="fs-field">
+                    <label class="fs-label" for="email">Email</label>
+                    <input class="fs-input" id="email" name="email" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="message">Message</label>
+                    <textarea class="fs-textarea" id="message" name="message"></textarea>
+                </div>
+                <div class="fs-button-group">
+                    <button class="fs-button" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-
-        <section class="timeline">
-
-            <div class="title-wrapper">
-                <div class="icon-box">
-                    <ion-icon name="book-outline"></ion-icon>
-                </div>
-
-                <h3 class="h3">Education</h3>
+        <!-- contact form end -->
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="/assets/images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+                <p><a href="mailto:mbhavar2121@gmail.com">mbhavar2121@gmail.com</a></p>
             </div>
-
-            <ol class="timeline-list">
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title">MCA In Management</h4>
-
-                    <span>2024-Pursuing</span>
-
-                    <p class="timeline-text">
-                        MET's Bhujbal Knowledge City, Institute Of Management, Nashik, Maharashtra, India
-                    </p>
-
-                </li>
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title">Bachelor's In Commerce</h4>
-
-                    <span>2023 :: 7.5 CGPA</span>
-
-                    <p class="timeline-text">
-                        K.R.T. Arts, B.H. Commerce and A.M. Science College, Nashik, Maharashtra, India
-                    </p>
-
-                </li>
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title">HSC</h4>
-
-                    <span>2020 :: 60.46%</span>
-
-                    <p class="timeline-text">
-                        K.R.T. Arts, B.H. Commerce and A.M. Science College, Nashik, Maharashtra, India
-                    </p>
-
-                </li>
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title">SSC</h4>
-
-                    <span>2018 :: 71.60%</span>
-
-                    <p class="timeline-text">
-                        Maratha Vidya Prasarak, Nashik, Maharashtra, India
-                    </p>
-
-                </li>
-            </ol>
-
-        </section>
-    </div>
-    <div>
-        <section class="timeline">
-
-            <div class="title-wrapper">
-                <div class="icon-box">
-                    <ion-icon name="book-outline"></ion-icon>
-                </div>
-
-                <h3 class="h3">Courses & Trainings</h3>
+            <div class="contact-info-container">
+                <img src="./assets/images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/manish-bhavar-598aba297/">LinkedIn</a></p>
             </div>
-
-            <ol class="timeline-list">
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title"> JAVA FULLSTACK by CodeForSuccess</h4>
-
-                    <span> May 2025 - Aug 2025</span>
-
-                    <p class="timeline-text">
-                        During my FullStack Course, I mastered Java programming, including OOP, exception
-                        handling, and multithreading. I also became proficient with Java frameworks and Spring,
-                        showcasing strong problem-solving and collaboration skills.
-                    </p>
-
-                </li>
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title"> AI: Transformative Learning with TechSaksham</h4>
-
-                    <span> 4 Week Internship</span>
-
-                    <p class="timeline-text">
-                        During this internship, I Developed an Attendance Management System Using Face
-                        Recognition This project was a rewarding experience, combining innovation with practical
-                        application.
-                    </p>
-
-                </li>
-
-                <li class="timeline-item">
-
-                    <h4 class="h4 timeline-item-title">Infosys Springboard Virtual Internship 6.0</h4>
-
-                    <span> Shortlisted Candidate</span>
-
-                    <p class="timeline-text">
-
-                        I’m officially stepping into the Infosys Springboard Virtual Internship 6.0 an online
-                        internship opportunity designed for students and freshers to build job-ready skills through
-                        real-world learning and project experience. </p>
-
-                </li>
-
-            </ol>
-
-        </section>
-        <div>
-            <section class="skill">
-
-                <h3 class="h3 skills-title">My skills</h3>
-
-                <ul class="skills-list content-card">
-
-                    <li class="skills-item">
-
-                        <div class="title-wrapper">
-                            <h5 class="h5">Team Collaboration</h5>
-                            <data value="80">80%</data>
-                        </div>
-
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 80%;"></div>
-                        </div>
-
-                    </li>
-
-                    <li class="skills-item">
-
-                        <div class="title-wrapper">
-                            <h5 class="h5">Adaptive Nature</h5>
-                            <data value="70">70%</data>
-                        </div>
-
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 70%;"></div>
-                        </div>
-
-                    </li>
-
-                    <li class="skills-item">
-
-                        <div class="title-wrapper">
-                            <h5 class="h5">Problem Solving</h5>
-                            <data value="90">75%</data>
-                        </div>
-
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 75%;"></div>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-            </section>
-        </div>
-    </div>
-    </article>
-</div> -->
-<!-- resume section ends here -->
-
-<section id="skills">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Technical Skills</h1>
-    <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container">
-                <h2 class="experience-sub-title">Programming Languages</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="/assets/images/Java.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Java</h3>
-                            <p>Advanced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/Python.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Python</h3>
-                            <p>Advanced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/js.png" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>JavaScript</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/Kotlin.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Kotlin</h3>
-                            <p>Basic</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="details-container">
-                <h2 class="experience-sub-title">Java Full Stack</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="/assets/images/Spring.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Spring Framework</h3>
-                            <p>Advanced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/Hibernate.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Hibernate</h3>
-                            <p>Advanced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/React.png" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>React</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/angularjs.png" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Angular</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                </div>
+            <div class="contact-info-container">
+                <img src="/assets/images/github.png" alt="GitHub icon" class="icon contact-icon" />
+                <p><a href="https://github.com/bmanish55">GitHub</a></p>
             </div>
         </div>
-        <div class="about-containers">
-            <div class="details-container">
-                <h2 class="experience-sub-title">Databases</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="/assets/images/MySQL.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>MySQL</h3>
-                            <p>Advanced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/MongoDB.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>MongoDB</h3>
-                            <p>Advanced</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/Oracle.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Oracle</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="details-container">
-                <h2 class="experience-sub-title">Tools & Technologies</h2>
-                <div class="article-container">
-                    <article>
-                        <img src="/assets/images/Git.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Git</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/Docker.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Docker</h3>
-                            <p>Basic</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/Power-BI-Logo.png" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>Power BI</h3>
-                            <p>Intermediate</p>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/assets/images/AWS.svg" alt="Skill icon" class="icon" />
-                        <div>
-                            <h3>AWS</h3>
-                            <p>Basic</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow"
-         onclick="location.href='./#projects'" />
-</section>
-<section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/web summerize.png" alt="Web Summarizer" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Web Summarizer</h2>
-                <p class="project-description">A web app that summarizes lengthy content or articles into short,
-                    digestible summaries.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Web-Summarizer'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/netflix-dashboard.jpg" alt="Netflix Dashboard" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Netflix Data Visualization</h2>
-                <p class="project-description">A Power BI dashboard exploring Netflix's content metrics—genres,
-                    countries, release years, and more.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Netflix-Data-Visualization'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Dashboard
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/MoodBased.jpg" alt="Mood Based Music" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Mood-Based Music Recommendation</h2>
-                <p class="project-description">Detects user mood via facial expressions and recommends songs using
-                    YouTube and Spotify APIs.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Mood_Based_Music_Recommendation_System'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/FaceAttendance.png" alt="Face Recognition Attendance"
-                         class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Face Recognition Attendance</h2>
-                <p class="project-description">Uses OpenCV to recognize faces and manage classroom attendance
-                    automatically.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Face_recongnition_attendance_mgm'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/spam-sms-detection.webp" alt="SMS Spam Detection"
-                         class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">SMS Spam Detection</h2>
-                <p class="project-description">A simple machine learning project to classify SMS messages as spam or
-                    ham (non-spam) using Python.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/SMS-Spam-Detection'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-</section>
-<section id="Blogs">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Blogs</h1>
-    <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/1stBlog.jpeg" alt="Web Summarizer" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Text Summarization Tools: Tracing the Journey from
-                    Early Algorithms to AI-Powered Future</h2>
-                <p class="project-description">.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://facialdatarecognition.hashnode.dev/the-evolution-of-facial-recognition-from-early-methods-to-future-innovations'">
-                        Read
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/netflix-dashboard.jpg" alt="Netflix Dashboard" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Netflix Data Visualization</h2>
-                <p class="project-description">A Power BI dashboard exploring Netflix's content metrics—genres,
-                    countries, release years, and more.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Netflix-Data-Visualization'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Dashboard
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/MoodBased.jpg" alt="Mood Based Music" class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Mood-Based Music Recommendation</h2>
-                <p class="project-description">Detects user mood via facial expressions and recommends songs using
-                    YouTube and Spotify APIs.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Mood_Based_Music_Recommendation_System'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/FaceAttendance.png" alt="Face Recognition Attendance"
-                         class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">Face Recognition Attendance</h2>
-                <p class="project-description">Uses OpenCV to recognize faces and manage classroom attendance
-                    automatically.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/Face_recongnition_attendance_mgm'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="/assets/images/spam-sms-detection.webp" alt="SMS Spam Detection"
-                         class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">SMS Spam Detection</h2>
-                <p class="project-description">A simple machine learning project to classify SMS messages as spam or
-                    ham (non-spam) using Python.</p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn"
-                            onclick="location.href='https://github.com/bmanish55/SMS-Spam-Detection'">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="./assets/images/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-</section>
-<section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <!-- contact form -->
-    <div>
-        <form action="https://formspree.io/f/{FORM_ID}" class="fs-form" target="_top" method="POST">
-            <div class="fs-field">
-                <label class="fs-label" for="email">Email</label>
-                <input class="fs-input" id="email" name="email" required />
-            </div>
-            <div class="fs-field">
-                <label class="fs-label" for="message">Message</label>
-                <textarea class="fs-textarea" id="message" name="message"></textarea>
-            </div>
-            <div class="fs-button-group">
-                <button class="fs-button" type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-    <!-- contact form end -->
-    <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-            <img src="/assets/images/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-            <p><a href="mailto:mbhavar2121@gmail.com">mbhavar2121@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-            <img src="./assets/images/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-            <p><a href="https://www.linkedin.com/in/manish-bhavar-598aba297/">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
-            <img src="/assets/images/github.png" alt="GitHub icon" class="icon contact-icon" />
-            <p><a href="https://github.com/bmanish55">GitHub</a></p>
-        </div>
-    </div>
-</section>
-<!-- Footer -->
-<div th:insert="footer :: footer"></div>
-<!-- footer  -->
-<script src="/assets/js/script.js"></script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    </section>
+    <!-- Footer -->
+    <div th:insert="footer :: footer"></div>
+    <!-- footer  -->
+    <script src="/assets/js/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
